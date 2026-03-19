@@ -2,7 +2,7 @@ with
 
 source as (
 
-    select * from {{ source('gz_raw', 'raw_bing') }}
+    select * from {{ source('gz_raw', 'adwords') }}
 
 ),
 
