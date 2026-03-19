@@ -1,9 +1,6 @@
-WITH join_margin AS
-(
-SELECT orders_id, date_date, shipping_fee, logcost, ship_cost, margin_
-FROM {{ ref('stg_gz_raw__ship') }}
-LEFT join {{ ref('int_sales_margin') }}
+
+SELECT date_date, orders_id, revenue_per_order, ship_cost+logcost AS operational_margin, shipping_fee, 
+logcost, ship_cost, total_cost_per_order, nb_products
+FROM {{ ref('int_orders_margin') }} 
+LEFT JOIN {{ ref('stg_gz_raw__ship') }}
 USING (orders_id)
-)
-SELECT orders_id, date_date, margin_+shipping_fee-logcost-ship_cost AS operational_margin, shipping_fee,logcost,ship_cost,margin_
-FROM join_margin
