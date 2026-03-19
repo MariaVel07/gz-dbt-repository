@@ -78,3 +78,22 @@ sources:
               column_name: "(date_date||'-'||paid_source||'-'||campaign_key)"
           - not_null:
               column_name: "(date_date||'-'||paid_source||'-'||campaign_key)"
+models:
+  - name: finance_campaigns_day
+    tests:
+      - unique:
+          column_name: date_date 
+      - not_null:
+          column_name: date_date
+  - name: finance_days
+    tests:
+      - unique:
+          column_name: date_date 
+      - not_null:
+          column_name: date_date
+  - name: finance_campaign_month
+    tests:
+      - unique:
+          column_name: date_date 
+      - not_null:
+          column_name: date_date
