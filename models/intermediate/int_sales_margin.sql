@@ -7,6 +7,6 @@ USING (products_id)
 )
 
 SELECT date_date, orders_id, quantity, purchase_price, revenue,
-    purchase_price*quantity AS purchase_cost
+    purchase_price*quantity AS purchase_cost, {{ margin_percent ('revenue-purchase_price*quantity','revenue',3)}} AS margin_perc
 FROM join_price
 
