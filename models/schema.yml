@@ -53,27 +53,28 @@ sources:
         identifier: raw_gz_adwords
         tests:
           - unique:
-            column name: "(date_date||'-'||paid_source||'-'||campaign_key)"
+              column_name: "(date_date||'-'||paid_source||'-'||campaign_key)"
           - not_null:
-            column name: "(date_date||'-'||paid_source||'-'||campaign_key)"       
+              column_name: "(date_date||'-'||paid_source||'-'||campaign_key)"
       - name: bing
         identifier: raw_gz_bing
         tests:
           - unique:
-            column name: "(date_date||'-'||paid_source||'-'||campaign_key)"
+              column_name: "(date_date||'-'||paid_source||'-'||campaign_key)"
           - not_null:
-            column name: "(date_date||'-'||paid_source||'-'||campaign_key)"  
+              column_name: "(date_date||'-'||paid_source||'-'||campaign_key)"
+
       - name: criteo
         identifier: raw_gz_criteo
         tests:
           - unique:
-            column name: "(date_date||'-'||paid_source||'-'||campaign_key)"
+              column_name: "(date_date||'-'||paid_source||'-'||campaign_key)"
           - not_null:
-            column name: "(date_date||'-'||paid_source||'-'||campaign_key)"  
+              column_name: "(date_date||'-'||paid_source||'-'||campaign_key)"
       - name: facebook
         identifier: raw_gz_facebook
         tests:
           - unique:
-            column name: "(date_date||'-'||paid_source||'-'||campaign_key)"
+              column_name: "(date_date||'-'||paid_source||'-'||campaign_key)"
           - not_null:
-            column name: "(date_date||'-'||paid_source||'-'||campaign_key)"  
+              column_name: "(date_date||'-'||paid_source||'-'||campaign_key)"
